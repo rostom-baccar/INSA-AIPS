@@ -1,0 +1,20 @@
+-Nom:BACCAR
+-Prénom: Rostom
+-Classe: 3MIC C
+-Commandes utilisées:
+
+    (exemple d'envoi de 10 messages de longueur 5 via le port 9000 à destination de la machine insa-20144)
+    TCP PUITS: tsock -p -n 10 -l 5 9000
+    TCP SOURCE: tsock -s -n 10 -l 5 insa-20144 9000
+
+    (exemple d'envoi de 5 messages de longueur 10 via le port 9000 à destination de la machine insa-20144)
+    UDP PUITS: tsock -p -u -n 5 -l 10 9000
+    UDP SOURCE: tsock -s -u -n 5 -l 10 insa-20144 9000
+
+-Etat final du travail:
+    Construction de messages à envoyer: marche bien
+    Envoi et réception UDP et TCP: fonctionnels
+    -l et -n: fonctionnels
+    Petit détail non optimisé: messages en question sans les 5 tirets qui devraient être relplacés par le numéro du message à chaque fois. Affichage simple du numéro du message puis de la chaîne de caractères.
+
+
